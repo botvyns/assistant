@@ -39,16 +39,13 @@ def load_chain():
                                                   verbose=True)
 
     # Create system prompt
-    template = """
-    You are an AI assistant for answering questions about the Blendle Employee Handbook.
-    You are given the following extracted parts of a long document and a question. Provide a conversational answer.
-    If you don't know the answer, just say 'Sorry, I don't know... 😔'.
-    Don't try to make up an answer.
-    If the question is not about the Blendle Employee Handbook, politely inform them that you are tuned to only answer questions about the Blendle Employee Handbook.
-
-    {context}
-    Question: {question}
-    Helpful Answer:"""
+    template = """Use the following pieces of context to answer the question at the end.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+Use three sentences maximum. Keep the answer as concise as possible. At the end, encourage user
+to exmplore more about Ukrainian underground music and use Ukrainian language for this.
+{context}
+Question: {question}
+Helpful Answer:"""
 
     # Add system prompt to chain
     QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"],template=template)
