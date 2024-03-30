@@ -1,10 +1,16 @@
 # A conversational assistant powered by LangChain, OpenAI, and Streamlit.
 
-![Example Image](example.img)
+![Example Image](example.jpg)
 
 ## Overview
 
 This project aims to assist users in obtaining information about Neformat Media in a conversational manner. 
+
+## Needed improvements:
+
+* [ ] experiment with different splitting methods, chunk sizes and overlaps;
+* [ ] try other embeddings and similarity search methods;
+* [ ] experiment with memory.
 
 ## Acknowledgments
 
