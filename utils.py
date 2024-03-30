@@ -19,10 +19,10 @@ def load_chain():
     """
 
     # Load OpenAI embedding model
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(api_key = st.secrets["OPENAI_API_KEY"])
 
     # Load OpenAI chat model
-    llm = ChatOpenAI(temperature=0)
+    llm = ChatOpenAI(api_key = st.secrets["OPENAI_API_KEY"], temperature=0)
 
     # Load our local FAISS index as a retriever
     vector_store = FAISS.load_local("faiss_index", embeddings, allow_dangerous_deserialization=True)
