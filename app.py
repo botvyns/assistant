@@ -17,7 +17,7 @@ if 'chain' not in st.session_state:
 if 'messages' not in st.session_state:
     # Start with first message from assistant
     st.session_state['messages'] = [{"role": "assistant",
-                                     "content": "Привіт! Мене створили, щоб я допоміг тобі більше дізнатися про видання Neformat - твого гайду локальною сценою."}]
+                                     "content": "Привіт! Мене створили, щоб я допоміг тобі більше дізнатися про видання Neformat - твій гайд локальною сценою."}]
 
 # Display chat messages from history on app rerun
 for message in st.session_state.get('messages', []):
